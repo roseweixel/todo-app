@@ -1,0 +1,11 @@
+<%= notice %>
+
+<h1>All of the Lists</h1>
+
+<%= render @lists %>
+
+<%= form_for @list do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<%= f.submit %>
+<% end %>

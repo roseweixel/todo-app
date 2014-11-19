@@ -1,0 +1,20 @@
+<%= notice %>
+
+<h1><%= @list.name %></h1>
+<ul id="task_list" data-list-id="<%= @list.id %>">
+<%= render @tasks %>
+</ul>
+
+<p>
+<%= form_for([@list, Task.new]) do |f| %>
+	<%= f.label :description %>
+	<%= f.text_field :description %>
+
+	<%= f.label :priority %>
+	<%= f.text_field :priority %>
+
+	<%= f.submit %>
+<% end %>
+</p>
+
+<%= link_to "Home", root_path %>

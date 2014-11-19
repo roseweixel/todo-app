@@ -1,0 +1,7 @@
+<li data-item-id="<%= task.id %>">
+<span class="delete_task"><%= link_to "x" %></span>
+<%= task.description %>&nbsp; 
+<% if task.priority != "" %>
+<strong>priority:</strong> <%= task.priority %>
+<% end %>
+</li>
